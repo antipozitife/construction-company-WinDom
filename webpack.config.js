@@ -11,9 +11,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|jsx|ts|tsx)$/,
         exclude: /node_modules/,
-        use: 'babel-loader', // Транспиляция JS/JSX
+        use: 'babel-loader',
       },
       {
         test: /\.css$/,
@@ -26,7 +26,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'], // Автоматическое разрешение этих расширений
+    extensions: ['.js', '.jsx', '.ts', '.tsx'], // Автоматическое разрешение этих расширений
   },
   plugins: [
     new HtmlWebpackPlugin({

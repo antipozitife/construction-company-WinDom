@@ -142,7 +142,7 @@ header button:hover {
 
 .hero h1 {
     font-family: "Geometria", sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
     text-transform: uppercase;
     white-space: nowrap;
@@ -165,10 +165,10 @@ header button:hover {
 }
 
 .hero p {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 400;
     margin: 26px 0 40px;
-    max-width: 596px;
+    max-width: 446px;
 }
 
 .hero-buttons {
@@ -347,62 +347,70 @@ header button:hover {
 }
 
 .company-section {
-    max-width: 1080px;
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 150px 0 0 70px;
-    padding-right: 20px;
+    margin: 100px auto;
 }
-
+        
 .company-text {
-    flex: 1;
-    padding-right: 40px;
+    width: 530px;
+    flex-shrink: 0;
 }
-
+        
 .company-text h2 {
-    font-family: "Geometria", sans-serif;
-    font-size: 46px;
+    font-size: 40px;
     color: #EFA35A;
     margin-bottom: 40px;
     text-transform: uppercase;
     font-weight: 700;
 }
-
+        
 .company-text p {
-    font-size: 30px;
+    font-size: 22px;
     font-weight: 400;
     color: #333333;
     line-height: 32px;
     margin-bottom: 10px;
-    max-width: 614px;
+    margin-bottom: 25px;
 }
-
+        
 .company-text .windom {
-    font-family: "Geometria", sans-serif;
-    font-size: 24px;
     color: #EFA35A;
-    margin: 0;
-    display: inline;
     font-weight: 500;
 }
-
-.company-image {
-    max-width: 100%;
-    margin: 0 auto 50px; /* Отступ снизу для разделения */
+        
+.images-container {
     position: relative;
-    margin-left: 84px; /* Смещение картинки правее иконок на 84px относительно левого края */
+    flex-shrink: 0;
+    margin-left: 74px;
 }
-
+        
+.company-image {
+    margin-top: 26px;
+    width: 551px;
+    height: 451px;
+    display: block;
+    object-fit: cover;
+}
+        
+.orange-frame {
+    position: absolute;
+    left: 31px;
+    top: 0px;
+    z-index: -1;
+    width: 488px;
+    height: 503px;
+}
+        
 .social-icons {
-    max-width: 1080px;
-    margin: 30px auto;
-    padding: 20px 386px;
+    margin-top: 67px;
+    margin-left: 325px;
     display: flex;
     gap: 15px;
-    justify-content: flex-start;
 }
-
+        
 .social-icons a {
     display: flex;
     align-items: center;
@@ -413,17 +421,158 @@ header button:hover {
     text-decoration: none;
     border: 1px solid #414753;
 }
-
+        
 .social-icons img {
     width: 20px;
     height: 20px;
-    transition: none;
+    transition: filter 0.3s ease;
 }
-
+        
 .social-icons a:hover {
     background-color: #414753;
 }
-
+        
 .social-icons a:hover img {
     filter: brightness(0) invert(1);
+}
+
+.wrapper-unique-architecture {
+  position: relative;
+  padding: 60px 20px 100px; /* Увеличим верхний паддинг, чтобы освободить место под заголовок */
+  max-width: 1162px;
+  margin: 0 auto;
+  border: 1px solid #f49c42;
+  background-color: white;
+}
+
+.uniqueArchitecture {
+  position: relative;
+  width: 100%;
+}
+
+/* Заголовок выходит за рамку вверх */
+.uniqueArchitecture h1 {
+  position: absolute;
+  top: -70px; 
+  left: -21px; 
+  background: white;
+  padding: 0 75px 68px 0;
+  font-size: 40px;
+  font-weight: 500;
+  z-index: 2; /* поверх рамки */
+}
+
+.unique {
+  color: #000000;
+
+}
+
+.architecture {
+  color: #f49c42;
+  font-style: Italic;
+}
+
+.unique-architecture-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: auto;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 68px 16px;
+  gap: 1px;
+}
+
+.unique-architecture-images img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.architecture-description {
+  position: absolute;
+  top: 600px;
+  right: -40px;
+  padding: 20px;
+  max-width: 810px;
+  text-align: left;
+  z-index: 2;
+  background: white;
+}
+
+.wrapper-unique-architecture p {
+  font-size: 23px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #000;
+  background: white;
+  display: inline;
+}
+
+.wrapper-unique-architecture p.orange-text-about-architecture {
+  color: #f49c42;
+  font-style: italic;
+}
+
+
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 130px auto;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  height: 400px; /* Adjust height as needed */
+}
+
+.slider-item {
+  flex: 0 0 33.33%;
+  height: 100%;
+  transition: filter 0.5s ease, opacity 0.5s ease;
+}
+
+.slider-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-item.active {
+  filter: blur(0px);
+  opacity: 1;
+}
+
+.slider-item.side {
+  filter: blur(5px);
+  opacity: 0.8;
+}
+
+.slider-item.inactive {
+  display: none;
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active-dot {
+  background-color: #f4a261;
 }

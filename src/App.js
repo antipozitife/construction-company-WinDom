@@ -4,19 +4,26 @@ import Hero from './components/Hero';
 import Stats from './components/Stats';
 import CompanySection from './components/CompanySection';
 import SocialIcons from './components/SocialIcons';
+import UniqueArchitecture from './components/UniqueArchitecture';
+import ImageSlider from './components/ImageSlider';
 
-const App = () => {
+function App() {
   return (
-    <div className="wrapper">
-      <div className="wrapper-header">
-        <Header />
+    <React.Fragment>
+      <div className="wrapper">
+        <div className="wrapper-header">
+          <Header />
+        </div>
+        <Hero />
       </div>
-      <Hero />
       <Stats />
       <CompanySection />
-      <SocialIcons />
-    </div>
+      <div  className="wrapper-unique-architecture">
+        <UniqueArchitecture />
+      </div>
+      <ImageSlider/>
+    </React.Fragment>
   );
-};
+}
 
 export default App;

@@ -1,25 +1,42 @@
 import React from 'react';
-// Импортируйте SVG по мере необходимости, например:
+import logo from '../../img/logo.svg';
 import phoneLogo from '../../img/phoneLogo.svg';
-import vk from '../../img/vk.svg'; // Пример, добавьте другие
+import vectorMenu from '../../img/VectorMenu.svg';
+
 
 const Header = () => {
   return (
     <header>
       <div className="container">
-        <img src={require('../../img/logo.svg')} alt="Logo" /> {/* Используйте require для изображений */}
+        <img src={logo} alt="Logo" /> 
         <div className="container-menu">
           {/* Выпадающие списки и ссылки */}
-          <a href="#">Наши проекты</a>
           <div className="dropdown">
-            <button className="dropbtn">Дома <img src={require('../../img/VectorMenu.svg')} alt="Menu" /></button>
+            <button className="dropbtn">Наши проекты <img src={vectorMenu} alt="Menu" /></button>
+            <div className="dropdown-content">
+              <a href="#">Изумрудный Village</a>
+              <a href="#">IQ CLUB</a>
+              <a href="#">Усады</a>
+              <a href="#">Зимняя горка</a>
+              <a href="#">Константиновка</a>
+            </div>
+          </div>
+          <div className="dropdown">
+            <button className="dropbtn">Дома <img src={vectorMenu} alt="Menu" /></button>
             <div className="dropdown-content">
               <a href="#">Одноэтажные</a>
               <a href="#">Двухэтажные</a>
-              {/* Добавьте другие */}
             </div>
           </div>
-          {/* Добавьте другие элементы меню */}
+          <a href="#">Ипотека</a>
+          <div className="dropdown">
+            <button className="dropbtn">О компании <img src={vectorMenu} alt="Menu" /></button>
+            <div className="dropdown-content">
+              <a href="#">Команда</a>
+              <a href="#">СМИ о нас</a>
+              <a href="#">Новости</a>
+            </div>
+          </div>
         </div>
         <div className="calling">
           <div className="phone">
