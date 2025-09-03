@@ -1,59 +1,61 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import image1 from '../../img/ImageSlider1.svg';
+import image2 from '../../img/ImageSlider2.svg';
+import image3 from '../../img/ImageSlider3.svg';
+import image4 from '../../img/ImageSlider4.svg';
+import image5 from '../../img/ImageSlider5.svg';
+import '../main.css';
 
-const images = [image1, image1, image1, image1];
-const AUTO_SWITCH_INTERVAL = 5000;
+const images = [image1, image2, image3, image4, image5];
 
 const ImageSlider: React.FC = () => {
   const [current, setCurrent] = useState(0);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  const resetTimeout = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-  };
+  const [isManualScroll, setIsManualScroll] = useState(false);
 
   useEffect(() => {
-    resetTimeout();
-    timeoutRef.current = setTimeout(() => {
-      setCurrent((prevIndex) => (prevIndex + 1) % images.length);
-    }, AUTO_SWITCH_INTERVAL);
-    return () => resetTimeout();
-  }, [current]);
+    if (isManualScroll) return;
 
-  const handleDotClick = (index: number) => {
+    const interval = setInterval(() => {
+      goToSlide((current + 1) % images.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [current, isManualScroll]);
+
+  const goToSlide = (index: number) => {
+    setIsManualScroll(true);
     setCurrent(index);
+    setTimeout(() => setIsManualScroll(false), 1000);
   };
 
-  const getPrevIndex = (index: number) => (index - 1 + images.length) % images.length;
-  const getNextIndex = (index: number) => (index + 1) % images.length;
+  const getSlidePosition = (index: number) => {
+    const prev = (current - 1 + images.length) % images.length;
+    const next = (current + 1) % images.length;
+
+    if (index === current) return 'active';
+    if (index === prev) return 'prev';
+    if (index === next) return 'next';
+    return 'hidden';
+  };
 
   return (
-    <div className="slider-wrapper">
-      <div className="slider-track">
-        {images.map((img, index) => {
-          const isActive = index === current;
-          const isPrev = index === getPrevIndex(current);
-          const isNext = index === getNextIndex(current);
-
-          return (
-            <div
-              key={index}
-              className={`slider-item ${isActive ? 'active' : isPrev || isNext ? 'side' : 'inactive'}`}
-            >
-              <img src={img} alt={`slide-${index}`} />
-            </div>
-          );
-        })}
+    <div className="sliderWrapper">
+      <div className="carousel">
+        {images.map((img, idx) => (
+          <div key={idx} className={`slide ${getSlidePosition(idx)}`}>
+            <img src={img} alt={`Slide ${idx + 1}`} />
+          </div>
+        ))}
       </div>
 
       <div className="slider-dots">
-        {images.map((_, index) => (
+        {images.map((_, idx) => (
           <span
-            key={index}
-            className={`dot ${index === current ? 'active-dot' : ''}`}
-            onClick={() => handleDotClick(index)}
+            key={idx}
+            className={`dot ${idx === current ? 'active-dot' : ''}`}
+            onClick={() => goToSlide(idx)}
           />
         ))}
       </div>

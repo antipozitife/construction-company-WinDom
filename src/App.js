@@ -3,9 +3,8 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
 import CompanySection from './components/CompanySection';
-import SocialIcons from './components/SocialIcons';
 import UniqueArchitecture from './components/UniqueArchitecture';
-import ImageSlider from './components/ImageSlider';
+import ImageSlider from './components/ImageSlider'
 
 function App() {
   return (
