@@ -21,6 +21,7 @@ function App() {
         <UniqueArchitecture />
       </div>
       <ImageSlider/>
+      
     </React.Fragment>
   );
 }
