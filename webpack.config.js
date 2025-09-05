@@ -1,11 +1,11 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './src/index.js', // Точка входа
+  entry: "./src/index.js", // Точка входа
   output: {
-    path: path.resolve(__dirname, 'dist'), // Папка вывода
-    filename: 'bundle.js', // Собраный JS-файл
+    path: path.resolve(__dirname, "dist"), // Папка вывода
+    filename: "bundle.js", // Собраный JS-файл
     clean: true, // Очистка папки dist при сборке
   },
   module: {
@@ -13,32 +13,32 @@ module.exports = {
       {
         test: /\.(js|jsx|ts|tsx)$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
+        use: "babel-loader",
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'], // Обработка CSS
+        use: ["style-loader", "css-loader"], // Обработка CSS
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource', // Обработка изображений/SVG (встроено в Webpack 5+)
+        type: "asset/resource", // Обработка изображений/SVG (встроено в Webpack 5+)
       },
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'], // Автоматическое разрешение этих расширений
+    extensions: [".js", ".jsx", ".ts", ".tsx"], // Автоматическое разрешение этих расширений
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html', // Использовать как базовый HTML
-      filename: 'index.html',
+      template: "./public/index.html", // Использовать как базовый HTML
+      filename: "index.html",
     }),
   ],
   devServer: {
-    static: path.join(__dirname, 'dist'),
+    static: path.join(__dirname, "dist"),
     compress: true,
     port: 3000, // Порт сервера разработки
     hot: true,
   },
-  mode: 'development', // Измените на 'production' для сборок
+  mode: "development", // Измените на 'production' для сборок
 };

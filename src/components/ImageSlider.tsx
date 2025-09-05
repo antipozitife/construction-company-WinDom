@@ -1,12 +1,12 @@
-import React, { useEffect, useState, useRef } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import image1 from '../../img/ImageSlider1.svg';
-import image2 from '../../img/ImageSlider2.svg';
-import image3 from '../../img/ImageSlider3.svg';
-import image4 from '../../img/ImageSlider4.svg';
-import image5 from '../../img/ImageSlider5.svg';
-import '../main.css';
+import React, { useEffect, useState, useRef } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import image1 from "../../img/ImageSlider1.svg";
+import image2 from "../../img/ImageSlider2.svg";
+import image3 from "../../img/ImageSlider3.svg";
+import image4 from "../../img/ImageSlider4.svg";
+import image5 from "../../img/ImageSlider5.svg";
+import "../main.css";
 
 const images = [image1, image2, image3, image4, image5];
 
@@ -34,10 +34,10 @@ const ImageSlider: React.FC = () => {
     const prev = (current - 1 + images.length) % images.length;
     const next = (current + 1) % images.length;
 
-    if (index === current) return 'active';
-    if (index === prev) return 'prev';
-    if (index === next) return 'next';
-    return 'hidden';
+    if (index === current) return "active";
+    if (index === prev) return "prev";
+    if (index === next) return "next";
+    return "hidden";
   };
 
   return (
@@ -54,7 +54,7 @@ const ImageSlider: React.FC = () => {
         {images.map((_, idx) => (
           <span
             key={idx}
-            className={`dot ${idx === current ? 'active-dot' : ''}`}
+            className={`dot ${idx === current ? "active-dot" : ""}`}
             onClick={() => goToSlide(idx)}
           />
         ))}
