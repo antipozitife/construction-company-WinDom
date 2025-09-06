@@ -1,0 +1,220 @@
+/* Основной контейнер */
+.ourProjects {
+  max-width: 1200px;
+  margin: 150px auto 0 auto;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Заголовок */
+.ourProjects h1 {
+  font-size: 46px;
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+
+.ourProjects .our {
+  color: black;
+}
+
+.ourProjects .projects {
+  color: #f49c42;
+  font-style: italic;
+}
+
+/* ----- Фильтры ----- */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.filters p {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.filters a {
+  text-decoration: none;
+}
+
+.filters button {
+  padding: 15px 30px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.filters button.active {
+  background-color: #f49c42;
+  color: white;
+  border-color: #f49c42;
+}
+
+.filters button:hover {
+  background-color: #f2f2f2;
+}
+
+/* Кнопка "На карте" с иконкой */
+.map-button button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ----- Выбор локации ----- */
+.location {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.location p {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.dropdownLoc {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtnLoc {
+  font-size: 22px;
+  font-weight: 500;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: none;
+}
+
+.dropdownLoc-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 220px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+  z-index: 1;
+  margin-top: 4px;
+}
+
+.dropdownLoc-content button {
+  width: 100%;
+  padding: 10px 16px;
+  text-align: left;
+  border: none;
+  background: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dropdownLoc-content button:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdownLoc:hover .dropdownLoc-content {
+  display: block;
+}
+
+/* ----- Сетка карточек ----- */
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+  gap: 2px;
+}
+
+/* Заголовок проекта */
+.project-card h1 {
+  font-size: 24px;
+  margin: 10px 0 4px;
+}
+
+/* Изображение */
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  aspect-ratio: 16 / 10;
+}
+
+/* ----- Блок описания ----- */
+.houseDescription {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0 16px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  flex-wrap: wrap;
+}
+
+.houseDescription img {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.houseDescription .description {
+  color: #000;
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+.houseDescription .status {
+  color: #f49c42;
+  white-space: nowrap;
+}
+
+/* ----- Кнопка "Смотреть всё" ----- */
+.view-all-button {
+  text-decoration: none;
+  color: inherit;
+}
+
+.view-all-button button {
+  margin-top: 60px;
+  background-color: transparent;
+  border: 1px solid #efa35a;
+  color: #000000;
+  font-size: 18px;
+  padding: 15px 60px;
+  cursor: pointer;
+  border-radius: 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.view-all-button button:hover {
+  background-color: #f5dcc2;
+  color: #0f0f0f;
+}
+
+.view-all-button p {
+  font-size: 18px;
+}

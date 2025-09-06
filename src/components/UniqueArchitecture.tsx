@@ -1,6 +1,7 @@
 import React from "react";
 import day from "../../img/UniqueArchitectureDay.svg";
 import night from "../../img/UniqueArchitectureNight.svg";
+import "./css/UniqueArchitecture.css";
 
 const UniqueArchitecture = () => {
   return (

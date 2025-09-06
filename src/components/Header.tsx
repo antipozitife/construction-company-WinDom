@@ -2,9 +2,13 @@ import React, { useState, useEffect } from "react";
 import logo from "../../img/logo.svg";
 import phoneLogo from "../../img/phoneLogo.svg";
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import vectorMenu from "../../img/VectorMenu.svg";
-import x from "../../img/x.svg";
-import successfullyCheckmark from "../../img/successfullyCheckmark.svg";
+import FormModal from "./callingForm"; 
+import SuccessModal from "./successModal";
+import Houses from "../pages/housesTest";
+import MainPage from "../pages/mainPage"
+import "./css/Header.css"
 
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -83,14 +87,16 @@ const Header = () => {
   return (
     <header>
       <div className="container">
-        <Link to="#/">
+        <Link to="/">
           <img src={logo} alt="Логотип" />
         </Link>
         <div className="container-menu">
           <div className="dropdown">
-            <button className="dropbtn">
-              Наши проекты <img src={vectorMenu} alt="Меню" />
-            </button>
+            <ScrollLink to="OurProjects" smooth="linear" duration={500}>
+              <button className="dropbtn">
+                Наши проекты <img src={vectorMenu} alt="Меню" />
+              </button>
+            </ScrollLink>
             <div className="dropdown-content">
               <a href="#">Изумрудный Village</a>
               <a href="#">IQ CLUB</a>
@@ -100,16 +106,17 @@ const Header = () => {
             </div>
           </div>
           <div className="dropdown">
-            <Link to="/FirstRoom">
-            <button className="dropbtn">
-              Дома <img src={vectorMenu} alt="Меню" />
-            </button></Link>
+            <ScrollLink to="OurProjects" smooth="linear" duration={500}>
+              <button className="dropbtn">
+                Дома <img src={vectorMenu} alt="Меню" />
+              </button>
+            </ScrollLink>
             <div className="dropdown-content">
               <Link to="/FirstRoom">Одноэтажные</Link>
               <a href="#">Двухэтажные</a>
             </div>
           </div>
-          <a href="#">Ипотека</a>
+          <a href="#">Контакты</a>
           <div className="dropdown">
             <button className="dropbtn">
               О компании <img src={vectorMenu} alt="Меню" />
@@ -131,76 +138,20 @@ const Header = () => {
       </div>
 
       {/* Первая модалка: форма */}
-      {isModalOpen && (
-        <div className="modal-overlay" onClick={handleCloseModal}>
-          <div className="window" onClick={(e) => e.stopPropagation()}>
-            <button
-              onClick={handleCloseModal}
-              type="button"
-              className="modal-close-btn"
-            >
-              <img src={x} alt="Закрыть" />
-            </button>
-            <div className="window-content">
-              <h2>
-                Оставьте свои данные и наш менеджер перезвонит вам в течении 30
-                минут
-              </h2>
-              <form onSubmit={handleSubmit}>
-                <div>
-                  <label>Имя *</label>
-                  <input type="text" required />
-                </div>
-                <div>
-                  <label>Телефон *</label>
-                  <input
-                    type="text"
-                    value={phone}
-                    onChange={handlePhoneChange}
-                    maxLength={12}
-                    placeholder="+7XXXXXXXXXX"
-                    required
-                  />
-                  {phoneError && (
-                    <div style={{ color: "red", fontSize: "14px" }}>
-                      {phoneError}
-                    </div>
-                  )}
-                </div>
-                <button type="submit" className="submit-button">
-                  Заказать звонок
-                </button>
-                <label className="checkbox-label">
-                  <input type="checkbox" required />
-                  <span>
-                    Я согласен с политикой обработки персональных данных
-                  </span>
-                </label>
-              </form>
-            </div>
-          </div>
-        </div>
-      )}
+      <FormModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        onSubmit={handleSubmit}
+        phone={phone}
+        onPhoneChange={handlePhoneChange}
+        phoneError={phoneError}
+      />
 
       {/* Вторая модалка: успешная отправка */}
-      {isModalOpen1 && (
-        <div className="modal-overlay" onClick={() => setIsModalOpen1(false)}>
-          <div className="window1" onClick={(e) => e.stopPropagation()}>
-            <div className="window1-content">
-              <button
-                onClick={handleCloseModal1}
-                type="button"
-                className="modal-close-btn"
-              >
-                <img src={x} alt="Закрыть" />
-              </button>
-              <img src={successfullyCheckmark} />
-              <h2>Ваш запрос принят</h2>
-              <p>Наш менеджер свяжется с вами в ближайшее время</p>
-            </div>
-          </div>
-        </div>
-      )}
+      <SuccessModal
+        isOpen={isModalOpen1}
+        onClose={handleCloseModal1}
+      />
     </header>
   );
 };

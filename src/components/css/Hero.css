@@ -1,0 +1,235 @@
+.wrapper {
+  background-image: url(../../../img/heroIMG.svg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.hero {
+  max-width: 1080px;
+  margin: 240px 0 0 70px;
+  color: #ffffff;
+}
+
+.hero h1 {
+  font-family: "Geometria", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero h1 span {
+  display: inline;
+  font-size: 200px;
+  font-weight: 800;
+}
+
+.hero h1 span .win {
+  color: #efa35a;
+}
+
+.hero h1 span .dom {
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 26px 0 40px;
+  max-width: 446px;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 75px 0 114px 0;
+}
+
+.hero-buttons button {
+  padding: 15px 24px;
+  font-size: 18px;
+  font-weight: 700px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0px;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-buttons button:first-child {
+  background-color: #efa35a;
+}
+
+.hero-buttons button:first-child:hover {
+  background-color: #ec8520;
+}
+
+.hero-buttons button:nth-child(2) {
+  border: 1px solid #efa35a;
+  background: rgba(53, 53, 53, 0.7);
+}
+
+.hero-buttons button:nth-child(2):hover {
+  background: rgba(53, 53, 53, 0.95);
+}
+
+.hero-buttons .play {
+  background-color: #efa35a;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-left: auto;
+}
+
+.hero-buttons .play::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 15px solid #ffffff;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  margin-left: 4px;
+}
+
+.hero-buttons .play span {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.watch-video {
+  position: absolute;
+  right: 207px;
+  top: 85%;
+  transform: translateY(-50%);
+  display: flex; /* Убедимся, что используем flex для выравнивания */
+  align-items: center; /* Вертикальное выравнивание */
+  cursor: pointer;
+}
+
+.watch-video .circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: url("../../../img/playEllipse.svg");
+  background-size: cover;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 10px rgba(255, 204, 153, 0.5);
+  animation:
+    pulseSize 2s infinite,
+    pulseBrightness 2s infinite;
+  transition: all 0.3s ease;
+}
+
+.watch-video .triangle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: url("../../../img/playButtom.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.watch-video p {
+  position: absolute;
+  left: 110px;
+  font-size: 23px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0; /* Убираем отступы */
+  white-space: nowrap; /* Предотвращаем перенос текста */
+}
+
+@keyframes pulseSize {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseBrightness {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.1);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+.watch-video .circle:hover {
+  animation: none;
+  transform: scale(1.2);
+  filter: brightness(1);
+}
+
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.video-modal-content {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  height: 60%;
+  max-height: 450px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fff;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1100;
+  padding: 5px 15px;
+}
+
+.close-button:hover {
+  background: #f0f0f0;
+}
+
+/* Ensure iframe fills the modal content */
+.video-modal-content iframe {
+  width: 100%;
+  height: 100%;
+}

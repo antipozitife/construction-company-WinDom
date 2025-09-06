@@ -6,7 +6,7 @@ import image2 from "../../img/ImageSlider2.svg";
 import image3 from "../../img/ImageSlider3.svg";
 import image4 from "../../img/ImageSlider4.svg";
 import image5 from "../../img/ImageSlider5.svg";
-import "../main.css";
+import "./css/ImageSlider.css";
 
 const images = [image1, image2, image3, image4, image5];
 
@@ -41,7 +41,7 @@ const ImageSlider: React.FC = () => {
   };
 
   return (
-    <div className="sliderWrapper">
+    <div className="sliderWrapper" id="OurProjects">
       <div className="carousel">
         {images.map((img, idx) => (
           <div key={idx} className={`slide ${getSlidePosition(idx)}`}>

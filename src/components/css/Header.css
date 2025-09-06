@@ -1,0 +1,93 @@
+.wrapper-header {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+}
+
+.container {
+  margin: 0 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  padding: 22px 0;
+  justify-content: center;
+  gap: 0 124px;
+}
+
+header a {
+  font-size: 17px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.container-menu {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.dropbtn {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.dropbtn p {
+  margin: 0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 235px;
+  z-index: 1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  display: block;
+  padding: 12px 16px;
+}
+
+.dropdown-content a:hover {
+  color: #efa35a;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.calling {
+  display: flex;
+  align-items: center;
+  gap: 92px;
+}
+
+header button {
+  background-color: transparent;
+  border: 1px solid #efa35a;
+  color: #000000;
+  font-size: 18px;
+  padding: 15px 16px;
+  cursor: pointer;
+  border-radius: 0px;
+}
+
+header button:hover {
+  background-color: #f5dcc2;
+  color: #0f0f0f;
+}

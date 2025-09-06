@@ -2,6 +2,7 @@ import React from "react";
 import aboutUs from "../../img/img_about_us_main.svg";
 import frame from "../../img/orange_frame.svg";
 import SocialIcons from "./SocialIcons";
+import "./css/CompanySection.css";
 
 const CompanySection = () => {
   return (

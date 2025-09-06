@@ -1,0 +1,31 @@
+.social-icons {
+  margin-top: 67px;
+  margin-left: 325px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  text-decoration: none;
+  border: 1px solid #414753;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+  transition: filter 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #414753;
+}
+
+.social-icons a:hover img {
+  filter: brightness(0) invert(1);
+}

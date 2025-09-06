@@ -1,0 +1,112 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.window {
+  width: 438px;
+  height: 500px;
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.window-content {
+  padding: 10px 38px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.window h2 {
+  margin: 0 0 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.window p {
+  font-size: 14px;
+}
+
+.window div {
+  margin-bottom: 15px;
+}
+
+.window label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.window input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Кнопка крестика */
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.modal-close-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.modal-close-btn:hover img {
+  filter: brightness(0) saturate(100%) invert(39%) sepia(90%) saturate(746%)
+    hue-rotate(348deg) brightness(100%) contrast(95%);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.checkbox-label span {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.submit-button {
+  background-color: transparent;
+  border: 1px solid #efa35a;
+  color: #000000;
+  font-size: 18px;
+  padding: 15px 89px;
+  cursor: pointer;
+  border-radius: 0px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #f5dcc2;
+  color: #0f0f0f;
+}

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import heroIMG from "../../img/heroIMG.svg";
-import x from "../../img/x.svg";
-import pic from "../../img/answerIMG.svg";
-import successfullyCheckmark from "../../img/successfullyCheckmark.svg";
+import QuestionForm from "./questionForm"
+import SuccessModal from "./successModal";
+import "./css/Hero.css";
 
 const Hero = () => {
   const [isVideoOpen, setIsVideoOpen2] = useState(false);
@@ -131,81 +131,20 @@ const Hero = () => {
       )}
 
       {/* Первая модалка: форма */}
-      {isModalOpen2 && (
-        <div className="modal-overlay" onClick={handleCloseModal2}>
-          <div className="window2" onClick={(e) => e.stopPropagation()}>
-            <button
-              onClick={handleCloseModal2}
-              type="button"
-              className="modal-close-btn"
-            >
-              <img src={x} alt="Закрыть" />
-            </button>
-            <div className="window2-content">
-              <img src={pic} />
-              <div className="contactsForAnswers">
-                <h2>Укажите контакты для связи и напишите вопрос </h2>
-                <p>Наш менеджер свяжется с вами в ближайшее время</p>
-                <form onSubmit={handleSubmit}>
-                  <div>
-                    <label>Имя *</label>
-                    <input type="text" required />
-                  </div>
-                  <div>
-                    <label>Телефон *</label>
-                    <input
-                      type="text"
-                      value={phone}
-                      onChange={handlePhoneChange}
-                      maxLength={12}
-                      placeholder="+7XXXXXXXXXX"
-                      required
-                    />
-                    {phoneError && (
-                      <div style={{ color: "red", fontSize: "14px" }}>
-                        {phoneError}
-                      </div>
-                    )}
-                  </div>
-                  <div>
-                    <label>Комментарий *</label>
-                    <input type="text" required />
-                  </div>
-                  <button type="submit" className="submit-button">
-                    Задать вопрос
-                  </button>
-                  <label className="checkbox-label">
-                    <input type="checkbox" required />
-                    <span>
-                      Я согласен с политикой обработки персональных данных
-                    </span>
-                  </label>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <QuestionForm
+        isOpen={isModalOpen2}
+        onClose={handleCloseModal2}
+        onSubmit={handleSubmit}
+        phone={phone}
+        onPhoneChange={handlePhoneChange}
+        phoneError={phoneError}
+      />
 
       {/* Вторая модалка: успешная отправка */}
-      {isModalOpen1 && (
-        <div className="modal-overlay" onClick={() => setIsModalOpen1(false)}>
-          <div className="window1" onClick={(e) => e.stopPropagation()}>
-            <div className="window1-content">
-              <button
-                onClick={handleCloseModal1}
-                type="button"
-                className="modal-close-btn"
-              >
-                <img src={x} alt="Закрыть" />
-              </button>
-              <img src={successfullyCheckmark} />
-              <h2>Ваш запрос принят</h2>
-              <p>Наш менеджер свяжется с вами в ближайшее время</p>
-            </div>
-          </div>
-        </div>
-      )}
+      <SuccessModal
+        isOpen={isModalOpen1}
+        onClose={handleCloseModal1}
+      />
     </div>
   );
 };

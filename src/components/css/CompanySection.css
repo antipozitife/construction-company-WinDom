@@ -1,0 +1,57 @@
+.company-section {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 100px auto;
+}
+
+.company-text {
+  width: 530px;
+  flex-shrink: 0;
+}
+
+.company-text h2 {
+  font-size: 40px;
+  color: #efa35a;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.company-text p {
+  font-size: 22px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 32px;
+  margin-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+.company-text .windom {
+  color: #efa35a;
+  font-weight: 500;
+}
+
+.images-container {
+  position: relative;
+  flex-shrink: 0;
+  margin-left: 74px;
+}
+
+.company-image {
+  margin-top: 26px;
+  width: 551px;
+  height: 451px;
+  display: block;
+  object-fit: cover;
+}
+
+.orange-frame {
+  position: absolute;
+  left: 31px;
+  top: 0px;
+  z-index: -1;
+  width: 488px;
+  height: 503px;
+}

@@ -3,6 +3,7 @@ import vk from "../../img/vk.svg";
 import youtube from "../../img/youtube.svg";
 import linkedin from "../../img/linkedin.svg";
 import tumblr from "../../img/tumblr.svg";
+import "./css/SocialIcons.css";
 
 const SocialIcons: React.FC = () => {
   return (

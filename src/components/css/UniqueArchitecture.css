@@ -1,0 +1,77 @@
+.wrapper-unique-architecture {
+  position: relative;
+  padding: 60px 20px 100px; /* Увеличим верхний паддинг, чтобы освободить место под заголовок */
+  max-width: 1162px;
+  margin: 0 auto;
+  border: 1px solid #f49c42;
+  background-color: white;
+}
+
+.uniqueArchitecture {
+  position: relative;
+  width: 100%;
+}
+
+/* Заголовок выходит за рамку вверх */
+.uniqueArchitecture h1 {
+  position: absolute;
+  top: -70px;
+  left: -21px;
+  background: white;
+  padding: 0 75px 68px 0;
+  font-size: 40px;
+  font-weight: 500;
+  z-index: 2; /* поверх рамки */
+}
+
+.unique {
+  color: #000000;
+}
+
+.architecture {
+  color: #f49c42;
+  font-style: Italic;
+}
+
+.unique-architecture-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: auto;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 68px 16px;
+  gap: 1px;
+}
+
+.unique-architecture-images img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.architecture-description {
+  position: absolute;
+  top: 600px;
+  right: -40px;
+  padding: 20px;
+  max-width: 810px;
+  text-align: left;
+  z-index: 2;
+  background: white;
+}
+
+.wrapper-unique-architecture p {
+  font-size: 23px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #000;
+  background: white;
+  display: inline;
+}
+
+.wrapper-unique-architecture p.orange-text-about-architecture {
+  color: #f49c42;
+  font-style: italic;
+}

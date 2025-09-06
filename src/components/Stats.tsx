@@ -1,5 +1,6 @@
 import React from "react";
 import line from "../../img/line.svg";
+import "./css/Stats.css";
 
 const Stats = () => {
   const stats = [
