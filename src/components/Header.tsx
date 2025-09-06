@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../img/logo.svg";
 import phoneLogo from "../../img/phoneLogo.svg";
+import { Link } from "react-router-dom";
 import vectorMenu from "../../img/VectorMenu.svg";
 import x from "../../img/x.svg";
 import successfullyCheckmark from "../../img/successfullyCheckmark.svg";
@@ -82,9 +83,9 @@ const Header = () => {
   return (
     <header>
       <div className="container">
-        <a href="#">
+        <Link to="#/">
           <img src={logo} alt="Логотип" />
-        </a>
+        </Link>
         <div className="container-menu">
           <div className="dropdown">
             <button className="dropbtn">
@@ -99,11 +100,12 @@ const Header = () => {
             </div>
           </div>
           <div className="dropdown">
+            <Link to="/FirstRoom">
             <button className="dropbtn">
               Дома <img src={vectorMenu} alt="Меню" />
-            </button>
+            </button></Link>
             <div className="dropdown-content">
-              <a href="#">Одноэтажные</a>
+              <Link to="/FirstRoom">Одноэтажные</Link>
               <a href="#">Двухэтажные</a>
             </div>
           </div>
