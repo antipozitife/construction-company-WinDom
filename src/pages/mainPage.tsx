@@ -8,10 +8,12 @@ import UniqueArchitecture from '../components/UniqueArchitecture';
 import ImageSlider from '../components/ImageSlider';
 import OurProjects from '../components/OurProjects';
 import Houses from '../pages/housesTest';
+import ScrollToTop from '../components/ScrollToTop';
 
 function Main() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="Main">
         <Routes>
           <Route

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Header from "../components/Header";
+import HeroHouses from '../components/HeroHouses';
 import './housesTest.css'; // Assume a CSS file for styling
 
 interface House {
@@ -49,18 +51,12 @@ const ProjectsPage = () => {
 
   return (
     <div className="projects-page">
-      <header className="header">
-        <nav>
-          <ul>
-            <li>Наши проекты</li>
-            <li>Дома</li>
-            <li>Таунхаусы</li>
-            <li>Участки</li>
-            <li>Ипотека</li>
-            <li>О компании</li>
-          </ul>
-        </nav>
-      </header>
+      <div className="wrapperHero">
+          <div className="wrapperHero-header">
+            <Header />
+          </div>
+          <HeroHouses />
+        </div>
 
       <section className="projects-section">
         <h1>НАШИ ПРОЕКТЫ ДОМОВ</h1>
