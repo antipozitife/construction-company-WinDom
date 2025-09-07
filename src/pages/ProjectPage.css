@@ -73,22 +73,22 @@
 
 .images-container {
     margin-left: 0;
-  position: relative;
-  width: 50%;
+    position: relative;
+    width: 60%;
 }
 
 .orange-frame {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0; /* На задний план */
+  left: 45px;
+  width: 595px;
+  height: 675px;
+  z-index: -1; /* На задний план */
   pointer-events: none;
 }
 
 .company-image {
-  width: 48%; /* Две картинки занимают почти всю ширину */
+  width: 49%; /* Две картинки занимают почти всю ширину */
   height: auto;
   display: inline-block;
   vertical-align: middle;
@@ -97,11 +97,11 @@
 
 .company-image:first-child {
   margin-right: 2%; /* Отступ между картинками */
-  margin-top: -20px; /* Сдвиг первой картинки вверх */
+  margin-top: 150px; /* Сдвиг первой картинки вниз */
 }
 
-.company-image:last-child {
-  margin-top: 20px; /* Сдвиг второй картинки вниз */
+.company-image:nth-child(2) {
+  margin-top: -80px; /* Сдвиг второй картинки вверх, почти вровень с рамкой */
 }
 
 .text-container {
