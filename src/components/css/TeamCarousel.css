@@ -1,0 +1,60 @@
+.carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Остановка анимации при наведении на обертку */
+.carousel-wrapper:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll 40s linear infinite;
+    width: max-content;
+}
+
+.carousel-card {
+    flex: 0 0 auto;
+    width: 220px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-card:hover {
+    transform: scale(1.5);
+}
+
+.carousel-img {
+    height: 260px;
+    width: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.carousel-name {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.carousel-title {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Анимация прокрутки */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

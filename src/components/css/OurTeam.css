@@ -31,3 +31,11 @@
   color: black;
   margin: 0;
 }
+
+.intro-text h2 {
+    margin-top: 60px;
+    font-size: 21px;
+    font-weight: 400;
+    display: flex;
+    gap: 84px
+}
