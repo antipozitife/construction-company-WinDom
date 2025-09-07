@@ -33,14 +33,21 @@ const ProjectPage = () => {
 
             <div className='aboutProjectContent'>
                 <div className="images-container">
-                    <img src={project.imgAbout1} className="company-image" />
-                    <img src={project.imgAbout1} className="company-image" />
+                    <img src={project.imgAbout1} className="company-image first" />
+
+                    {/* Зумированный блок */}
+                    <div className="zoom-frame">
+                        <img src={project.imgAbout1} alt="Увеличенный участок" />
+                    </div>
+
                     <img src={frame} className="orange-frame" />
                 </div>
                 <div className='text-container'>
-                    <span className='nameProject'>{project.title1}</span>
-                    <span className='nameProject'>{project.title2} </span>
-                    <span>{project.description}</span>
+                    <div className="project-header-line">
+                        <span className="nameProject">{project.title1}</span>
+                        <span className="nameProject">{project.title2} </span>
+                        <span className="project-description">{project.description}</span>
+                    </div>
                     <ul>
                         <li>
                             <img src={project.IMGaboutList1}/>

@@ -1,0 +1,33 @@
+.containerTeam {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 1200px; /* Ограничивает ширину контейнера для центрирования */
+  margin: 0 auto; /* Центрирует контейнер на странице */
+}
+
+.intro-text {
+  margin-top: 90px;
+  margin-bottom: 20px;
+  text-align: left
+}
+
+.intro-text h1 {
+  font-size: 46px;
+  font-weight: 500;
+  margin: 0 0 10px 0;
+}
+
+.blackPart {
+  color: black;
+}
+
+.orangePart {
+  color: #EFA35A;
+  font-style: italic;
+}
+
+.intro-text p {
+  font-size: 18px;
+  color: black;
+  margin: 0;
+}

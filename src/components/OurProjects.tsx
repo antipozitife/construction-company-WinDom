@@ -110,13 +110,6 @@ const OurProjects = () => {
           <p>Таунхаусы</p>
         </button>
 
-        <a href="#map-anchor" className="map-button">
-          <button>
-            <p>На карте</p>
-            <img src={Map} alt="Map icon" />
-          </button>
-        </a>
-
         <button
           onClick={() => setSelectedCategory("all")}
           className={selectedCategory === "all" ? "active" : ""}

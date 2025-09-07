@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: flex-start;
   margin: 100px auto;
+  gap: 74px
 }
 
 .company-text {
@@ -40,7 +41,7 @@
 }
 
 .company-image {
-  margin-top: 26px;
+  margin-top: 31px;
   width: 551px;
   height: 451px;
   display: block;

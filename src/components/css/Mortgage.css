@@ -1,0 +1,103 @@
+.containerMortgage {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 1200px; /* Ограничивает ширину контейнера для центрирования */
+  margin: 0 auto; /* Центрирует контейнер на странице */
+}
+
+.intro-text {
+  margin-top: 90px;
+  margin-bottom: 20px;
+  text-align: left
+}
+
+.intro-text h1 {
+  font-size: 46px;
+  font-weight: 500;
+  margin: 0 0 10px 0;
+}
+
+.blackPartIntro {
+  color: black;
+}
+
+.orangePartIntro {
+  color: #EFA35A;
+  font-style: italic;
+}
+
+.intro-text p {
+  font-size: 18px;
+  color: black;
+  margin: 0;
+}
+
+.mortgage-cards-containerMotgage {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 10px;
+margin-top: 40px;
+}
+.mortgage-card {
+display: flex;
+width: 576px;
+height: 313px;
+border: 2px solid #f4a261; 
+box-sizing: border-box;
+overflow: hidden;
+}
+.mortgage-text {
+flex: 1;
+padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+background-color: #fff;
+}
+.mortgage-title {
+font-size: 24px;
+font-weight: 700;
+margin: 0 0 10px 0;
+color: black;
+}
+.mortgage-description {
+font-size: 16px;
+margin: 0 0 10px 0;
+color: black;
+}
+.mortgage-details {
+display: flex;
+gap: 20px;
+}
+.mortgage-column {
+display: flex;
+flex-direction: column;
+}
+.mortgage-value {
+font-size: 22px;
+font-weight: 700;
+color: black;
+}
+.mortgage-label {
+font-size: 11px;
+color: black;
+}
+.mortgage-text button {
+padding: 15px 30px;
+font-size: 16px;
+font-weight: 700px;
+border: none;
+cursor: pointer;
+border-radius: 0px;
+color: #ffffff;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+background-color: #efa35a;
+}
+.mortgage-text button:hover {
+background-color: #ec8520;
+}
+.mortgage-image {
+width: 50%; 
+height: 313px;
+object-fit: cover;
+}

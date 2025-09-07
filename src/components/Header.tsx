@@ -93,11 +93,11 @@ const Header = () => {
         </Link>
         <div className="container-menu">
           <div className="dropdown">
-            <ScrollLink to="OurProjects" smooth="linear" duration={500}>
+            <Link to="OurProjects">
               <button className="dropbtn">
                 Наши проекты <img src={vectorMenu} alt="Меню" />
               </button>
-            </ScrollLink>
+            </Link>
             <div className="dropdown-content">
               <Link to="/projects/izumrudny">Изумрудный Village</Link>
               <Link to="/projects/IQClub">IQ CLUB</Link>
@@ -105,25 +105,24 @@ const Header = () => {
             </div>
           </div>
           <div className="dropdown">
-            <ScrollLink to="Houses" smooth="linear" duration={500}>
+            <Link to="Houses">
               <button className="dropbtn">
                 Дома <img src={vectorMenu} alt="Меню" />
               </button>
-            </ScrollLink>
+            </Link>
             <div className="dropdown-content">
               <Link to="/FirstRoom">Одноэтажные</Link>
               <a href="#">Двухэтажные</a>
             </div>
           </div>
-          <a href="#">Контакты</a>
+          <Link to='Mortgage'>Ипотека</Link>
           <div className="dropdown">
             <button className="dropbtn">
               О компании <img src={vectorMenu} alt="Меню" />
             </button>
             <div className="dropdown-content">
               <a href="#">Команда</a>
-              <a href="#">СМИ о нас</a>
-              <a href="#">Новости</a>
+              <a href="#">Контакты</a>
             </div>
           </div>
         </div>

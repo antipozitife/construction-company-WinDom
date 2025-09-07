@@ -9,6 +9,8 @@ import ImageSlider from '../components/ImageSlider';
 import OurProjects from '../components/OurProjects';
 import Houses from './HousesPage';
 import ProjectPage from '../pages/ProjectPage'
+import Mortgage from '../components/Mortgage'
+import OurTeam from '../components/OurTeam'
 import ScrollToTop from '../components/ScrollToTop';
 
 function Main() {
@@ -34,6 +36,8 @@ function Main() {
                 </div>
                 <ImageSlider />
                 <OurProjects />
+                <Mortgage />
+                <OurTeam />
               </React.Fragment>
             }
           />
