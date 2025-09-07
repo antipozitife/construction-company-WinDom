@@ -7,7 +7,8 @@ import CompanySection from '../components/CompanySection';
 import UniqueArchitecture from '../components/UniqueArchitecture';
 import ImageSlider from '../components/ImageSlider';
 import OurProjects from '../components/OurProjects';
-import Houses from '../pages/housesTest';
+import Houses from './HousesPage';
+import ProjectPage from '../pages/ProjectPage'
 import ScrollToTop from '../components/ScrollToTop';
 
 function Main() {
@@ -37,6 +38,7 @@ function Main() {
             }
           />
           <Route path="/Houses" element={<Houses />} />
+          <Route path="/projects/:projectId" element={<ProjectPage />} />
         </Routes>
       </div>
     </Router>

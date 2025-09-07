@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import heroIMG from "../../img/heroIMG.svg";
 import QuestionForm from "./questionForm"
 import SuccessModal from "./successModal";
+import { Link as ScrollLink } from "react-scroll";
 import "./css/Hero.css";
 
 const Hero = () => {
@@ -110,7 +111,9 @@ const Hero = () => {
       </h1>
       <p>Мы строим дома, коттеджные поселки и таунхаусы в Казани</p>
       <div className="hero-buttons">
-        <button>Подробнее о проектах</button>
+        <ScrollLink to="OurProjects" smooth="linear" duration={500}>
+          <button>Подробнее о проектах</button>
+        </ScrollLink>
         <button onClick={handleOpenModal2}>Задать вопрос</button>
       </div>
 

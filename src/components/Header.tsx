@@ -6,7 +6,8 @@ import { Link as ScrollLink } from "react-scroll";
 import vectorMenu from "../../img/VectorMenu.svg";
 import FormModal from "./callingForm"; 
 import SuccessModal from "./successModal";
-import Houses from "../pages/housesTest";
+import ProjectsPage from "../pages/ProjectPage";
+import Houses from "../pages/HousesPage";
 import MainPage from "../pages/mainPage"
 import "./css/Header.css"
 
@@ -98,15 +99,13 @@ const Header = () => {
               </button>
             </ScrollLink>
             <div className="dropdown-content">
-              <a href="#">Изумрудный Village</a>
-              <a href="#">IQ CLUB</a>
-              <a href="#">Усады</a>
-              <a href="#">Зимняя горка</a>
-              <a href="#">Константиновка</a>
+              <Link to="/projects/izumrudny">Изумрудный Village</Link>
+              <Link to="/projects/IQClub">IQ CLUB</Link>
+              <Link to="/projects/usadi">Усады</Link>
             </div>
           </div>
           <div className="dropdown">
-            <ScrollLink to="OurProjects" smooth="linear" duration={500}>
+            <ScrollLink to="Houses" smooth="linear" duration={500}>
               <button className="dropbtn">
                 Дома <img src={vectorMenu} alt="Меню" />
               </button>

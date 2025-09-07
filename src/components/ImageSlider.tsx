@@ -41,7 +41,7 @@ const ImageSlider: React.FC = () => {
   };
 
   return (
-    <div className="sliderWrapper" id="OurProjects">
+    <div className="sliderWrapper" id="Houses">
       <div className="carousel">
         {images.map((img, idx) => (
           <div key={idx} className={`slide ${getSlidePosition(idx)}`}>
