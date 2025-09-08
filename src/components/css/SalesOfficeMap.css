@@ -1,0 +1,106 @@
+.sales-office-section {
+    padding: 40px 20px;
+    background: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.section-title img {
+    margin-left: 170px;
+}
+
+.map-content {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.map-block {
+    flex: 2;
+    height: 680px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    position: relative; /* для позиционирования info-block */
+}
+
+.info-block {
+    position: absolute; /* поверх карты */
+    top: 20px;
+    left: 20px;
+    max-width: 450px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    z-index: 10;
+}
+
+.info-block h3 {
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+}
+
+.orange {
+    color:#EFA35A;
+    font-style: italic;
+}
+
+.info-block p {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.info-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-size: 30px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.info-block ul li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 38px;
+}
+
+.route-button {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #EFA35A;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(240, 124, 0, 0.3);
+    text-align: center;
+    border-radius: 4px;
+}
+
+/* Эффекты наведения и нажатия */
+.route-button:hover {
+    background-color: #d66800;
+    transform: translateY(-1px);
+}
+
+/* Если нужно — стили для поисковой строки Яндекс карты */
+.ymaps-2-1-79-searchbox-input {
+    border-color: #f07c00 !important;
+}

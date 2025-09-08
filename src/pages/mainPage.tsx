@@ -11,6 +11,7 @@ import Houses from './HousesPage';
 import ProjectPage from '../pages/ProjectPage'
 import Mortgage from '../components/Mortgage'
 import OurTeam from '../components/OurTeam'
+import Map from '../components/SalesOfficeMap'
 import ScrollToTop from '../components/ScrollToTop';
 
 function Main() {
@@ -38,6 +39,7 @@ function Main() {
                 <OurProjects />
                 <Mortgage />
                 <OurTeam />
+                <Map />
               </React.Fragment>
             }
           />
