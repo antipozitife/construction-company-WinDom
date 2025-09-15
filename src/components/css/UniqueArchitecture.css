@@ -1,6 +1,6 @@
 .wrapper-unique-architecture {
   position: relative;
-  padding: 60px 20px 100px; /* Увеличим верхний паддинг, чтобы освободить место под заголовок */
+  padding: 60px 20px 100px;
   max-width: 1162px;
   margin: 0 auto;
   border: 1px solid #f49c42;

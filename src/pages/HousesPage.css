@@ -14,15 +14,25 @@
   font-family: Arial, sans-serif;
 }
 
-.header ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
+.projects-title {
+  margin-top: 40px;
+  margin-left: 60px;
+  font-size: 46px;
+}
+
+.black {
+  color: #000;
+}
+
+.orange {
+  color: orange; /* Или #ff6200, как раньше */
 }
 
 .filters {
   display: flex;
   gap: 1rem;
+  margin-top: 40px;
+  margin-left: 60px;
   margin-bottom: 1rem;
 }
 
@@ -36,6 +46,20 @@
 .filters button.active {
   background: orange;
   color: white;
+}
+
+.breadcrumb {
+  margin-top: 60px;
+  margin-left: 60px;
+  font-size: 30px; /* Если нужно, настройте */
+}
+
+.line-divider {
+  display: block;
+  margin-top: 20px; /* Ниже навигации */
+  width: 100%; /* Оранжевая полоска */
+  height: 2px; /* Пример, настройте под изображение */
+  background-color: orange;
 }
 
 .house-grid {

@@ -10,6 +10,7 @@
   font-size: 46px;
   font-weight: 400;
   margin-bottom: 60px;
+  white-space: nowrap;
 }
 
 .ourProjects .our {

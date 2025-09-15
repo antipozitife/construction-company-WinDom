@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../img/logo.svg";
 import phoneLogo from "../../img/phoneLogo.svg";
-import { Link } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
+import { Link, useNavigate } from "react-router-dom";
 import vectorMenu from "../../img/VectorMenu.svg";
 import FormModal from "./callingForm"; 
 import SuccessModal from "./successModal";
-import ProjectsPage from "../pages/ProjectPage";
-import Houses from "../pages/HousesPage";
-import MainPage from "../pages/mainPage"
 import "./css/Header.css"
 
 const Header = () => {
@@ -16,6 +12,7 @@ const Header = () => {
   const [isModalOpen1, setIsModalOpen1] = useState(false);
   const [phone, setPhone] = useState("+7");
   const [phoneError, setPhoneError] = useState("");
+  const navigate = useNavigate();
 
   // Открытие модального окна формы
   const handleOpenModal = () => {
@@ -85,6 +82,27 @@ const Header = () => {
     }
   }, [isModalOpen1]);
 
+  // Обработчики кликов для прокрутки к секциям
+  const handleMortgageClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    navigate("/#mortgage");
+  };
+
+  const handleCompanyClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    navigate("/#company");
+  };
+
+  const handleTeamClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    navigate("/#team");
+  };
+
+  const handleContactsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    navigate("/#contacts");
+  };
+
   return (
     <header>
       <div className="container">
@@ -93,36 +111,36 @@ const Header = () => {
         </Link>
         <div className="container-menu">
           <div className="dropdown">
-            <Link to="OurProjects">
+            <Link to="/our-projects">
               <button className="dropbtn">
                 Наши проекты <img src={vectorMenu} alt="Меню" />
               </button>
             </Link>
             <div className="dropdown-content">
               <Link to="/projects/izumrudny">Изумрудный Village</Link>
-              <Link to="/projects/IQClub">IQ CLUB</Link>
+              <Link to="/projects/iqclub">IQ CLUB</Link>
               <Link to="/projects/usadi">Усады</Link>
             </div>
           </div>
           <div className="dropdown">
-            <Link to="Houses">
+            <Link to="/houses">
               <button className="dropbtn">
                 Дома <img src={vectorMenu} alt="Меню" />
               </button>
             </Link>
             <div className="dropdown-content">
-              <Link to="/FirstRoom">Одноэтажные</Link>
-              <a href="#">Двухэтажные</a>
+              <Link to="/houses?floor=1">Одноэтажные</Link>
+              <Link to="/houses?floor=2">Двухэтажные</Link>
             </div>
           </div>
-          <Link to='Mortgage'>Ипотека</Link>
+          <Link to="/#mortgage" onClick={handleMortgageClick}>Ипотека</Link>
           <div className="dropdown">
-            <button className="dropbtn">
+            <button className="dropbtn" onClick={handleCompanyClick}>
               О компании <img src={vectorMenu} alt="Меню" />
             </button>
             <div className="dropdown-content">
-              <a href="#">Команда</a>
-              <a href="#">Контакты</a>
+              <Link to="/#team" onClick={handleTeamClick}>Команда</Link>
+              <Link to="/#contacts" onClick={handleContactsClick}>Контакты</Link>
             </div>
           </div>
         </div>

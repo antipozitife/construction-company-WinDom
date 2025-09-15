@@ -8,17 +8,17 @@ import "./css/SocialIcons.css";
 const SocialIcons: React.FC = () => {
   return (
     <div className="social-icons">
-      <a href="#">
-        <img src={youtube} alt="YOUTUBE" />
+      <a href="https://youtube.com/@ivandomrostov?si=wO8j8MLDnxF1_glh">
+        <img src={youtube} alt="YouTube" />
       </a>
-      <a href="#">
+      <a href="https://vk.com/ivan_dom_rostov">
         <img src={vk} alt="VK" />
       </a>
-      <a href="#">
-        <img src={linkedin} alt="LINKEDIN" />
+      <a href="https://www.instagram.com/ivan_dom_rostov?igsh=bzJwa2VhMWxoOHBy">
+        <img src={linkedin} alt="Instagram" />
       </a>
-      <a href="#">
-        <img src={tumblr} alt="TUMBLR" />
+      <a href="https://t.me/ivandomrosrov">
+        <img src={tumblr} alt="Telegram" />
       </a>
     </div>
   );

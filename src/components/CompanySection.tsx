@@ -4,9 +4,14 @@ import frame from "../../img/orange_frame.svg";
 import SocialIcons from "./SocialIcons";
 import "./css/CompanySection.css";
 
-const CompanySection = () => {
+// Интерфейс пропсов для компонента CompanySection
+interface CompanySectionProps {
+  id?: string; // Необязательный пропс id
+}
+
+const CompanySection: React.FC<CompanySectionProps> = ({ id }) => {
   return (
-    <div className="container">
+    <div className="container" id={id}>
       <div className="company-section">
         <div className="company-text">
           <h2>О КОМПАНИИ</h2>

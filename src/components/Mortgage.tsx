@@ -4,8 +4,13 @@ import { mortgageData } from '../data/mortgageData';
 import FormModal from "./callingForm"; 
 import SuccessModal from "./successModal";
 
-const CompanySection = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+// Интерфейс пропсов для компонента Mortgage
+interface MortgageProps {
+  id?: string; // Необязательный пропс id
+}
+
+const Mortgage: React.FC<MortgageProps> = ({ id }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalOpen1, setIsModalOpen1] = useState(false);
   const [phone, setPhone] = useState("+7");
   const [phoneError, setPhoneError] = useState("");
@@ -79,10 +84,10 @@ const CompanySection = () => {
   }, [isModalOpen1]);
 
   return (
-    <div className="containerMortgage" id='Mortgage'>
+    <div className="containerMortgage" id={id}>
       <div className="intro-text">
         <h1>
-          <span className='blackPartIntro'>Подберём решения </span>
+          <span className="blackPartIntro">Подберём решения </span>
           <span className="orangePartIntro">по ипотеке </span>
           <span className="blackPartIntro">уже сегодня</span>
         </h1>
@@ -104,7 +109,8 @@ const CompanySection = () => {
                   <span className="mortgage-label">Первоначальный взнос</span>
                 </div>
               </div>
-            <button onClick={handleOpenModal}>Заказать звонок</button>            </div>
+              <button onClick={handleOpenModal}>Заказать звонок</button>
+            </div>
             <img src={mortgage.image} alt={mortgage.title} className="mortgage-image" />
           </div>
         ))}
@@ -129,4 +135,4 @@ const CompanySection = () => {
   );
 };
 
-export default CompanySection;
+export default Mortgage;

@@ -2,8 +2,13 @@ import React, { useEffect, useState } from 'react';
 import img1 from '../../img/IMGMap1.svg';
 import img2 from '../../img/IMGMap2.svg';
 import img3 from '../../img/IMGMap3.svg';
-import frame from '../../img/orangeLine.svg'
+import frame from '../../img/orangeLine.svg';
 import './css/SalesOfficeMap.css';
+
+// Интерфейс пропсов для компонента SalesOfficeMap
+interface SalesOfficeMapProps {
+  id?: string; // Необязательный пропс id
+}
 
 declare global {
   interface Window {
@@ -13,7 +18,7 @@ declare global {
 
 const OFFICE_COORDS = [55.755160, 49.274615]; // Координаты офиса
 
-const SalesOfficeMap = () => {
+const SalesOfficeMap: React.FC<SalesOfficeMapProps> = ({ id }) => {
   const [map, setMap] = useState<any>(null);
   const [multiRoute, setMultiRoute] = useState<any>(null);
 
@@ -124,11 +129,11 @@ const SalesOfficeMap = () => {
   };
 
   return (
-    <div className="sales-office-section">
+    <div className="sales-office-section" id={id}>
       <h2 className="section-title">
         <span className="orange">ОФИС </span>
-        <span className='black'>ПРОДАЖ</span>
-        <img src={frame}/>
+        <span className="black">ПРОДАЖ</span>
+        <img src={frame} />
       </h2>
 
       <div className="map-content">
@@ -155,12 +160,12 @@ const SalesOfficeMap = () => {
             </ul>
 
             <a
-                className="route-button"
-                href="https://yandex.ru/maps/43/kazan/?from=api-maps&ll=49.274615%2C55.755160&mode=routes&origin=jsapi_2_1_79&rtext=~55.755160%2C49.274615&rtt=auto&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DIgoNNRlFQhVJBV9C&z=17"
-                target="_blank"
-                rel="noopener noreferrer"
-                >
-                Проложить маршрут
+              className="route-button"
+              href="https://yandex.ru/maps/43/kazan/?from=api-maps&ll=49.274615%2C55.755160&mode=routes&origin=jsapi_2_1_79&rtext=~55.755160%2C49.274615&rtt=auto&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DIgoNNRlFQhVJBV9C&z=17"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Проложить маршрут
             </a>
           </div>
         </div>
