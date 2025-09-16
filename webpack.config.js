@@ -39,6 +39,7 @@ module.exports = {
     compress: true,
     port: 3000, // Порт сервера разработки
     hot: true,
+    historyApiFallback: true,
   },
   mode: "development", // Измените на 'production' для сборок
 };

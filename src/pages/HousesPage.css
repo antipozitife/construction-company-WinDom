@@ -15,7 +15,7 @@
 }
 
 .projects-title {
-  margin-top: 40px;
+  margin-top: 140px;
   margin-left: 60px;
   font-size: 46px;
 }
@@ -37,6 +37,7 @@
 }
 
 .filters button {
+  font-size: 18px;
   padding: 0.5rem 1rem;
   border: 1px solid orange;
   background: white;
@@ -48,69 +49,168 @@
   color: white;
 }
 
+/* Навигация */
 .breadcrumb {
-  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 60px; /* Смещение вниз на 60px после фильтров */
   margin-left: 60px;
-  font-size: 30px; /* Если нужно, настройте */
+}
+
+.mainPr {
+  color: #353535;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.mainPr:hover {
+  color: #EFA359;
+  text-decoration: underline;
+}
+
+.line-wrapper {
+  padding: 0 60px;
 }
 
 .line-divider {
   display: block;
-  margin-top: 20px; /* Ниже навигации */
-  width: 100%; /* Оранжевая полоска */
-  height: 2px; /* Пример, настройте под изображение */
-  background-color: orange;
+  width: 100%;
 }
 
 .house-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(3, 373px);
+  gap: 20px;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .house-card {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  text-align: center;
+  width: 373px;
+  height: 100%;
+  border: 1px solid #EFA359;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  padding: 0;
 }
 
-.house-card img {
-  width: 100%;
-  height: auto;
+.house-image {
+width: 373px;
+height: 243px;
+position: absolute;
+top: 0px; 
+left: 0;
+margin-bottom: 20px; 
+object-fit: cover; 
+object-position: center; 
+}
+
+.house-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 30px;
+  margin-top: 220px;
+}
+
+.house-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-right: 8px; /* Отступ от правой рамки для цены */
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.houseName {
+  font-size: 36px;
+  color: #000;
+}
+
+.houseCost {
+  font-size: 23px;
+  color: orange;
+}
+
+.house-characteristics {
+  margin-top: 30px;
+}
+
+.house-characteristics p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.house-characteristics p img {
+  max-width: 40px;
 }
 
 .house-card button {
+  background-color: transparent;
+  border: 1px solid #efa35a;
+  color: #000000;
+  font-size: 18px;
+  padding: 15px 16px;
+  cursor: pointer;
+  border-radius: 0px;
+  margin-top: 14px;
+  margin-bottom: 30px;
+}
+
+.house-card button:hover {
+  background-color: #f5dcc2;
+  color: #0f0f0f;
+}
+
+
+
+
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.pagination-button {
+  background: transparent;
+  border: none;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.pagination-button:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination-number {
+  background: transparent;
+  border: 1px solid #ccc;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.pagination-number.active {
   background: orange;
   color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-}
-
-.village-banner {
-  background: url('../../img/banner-image.svg');
-  color: white;
-  padding: 2rem;
-  text-align: center;
-}
-
-.about-projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-}
-
-.map-placeholder {
-  width: 100%;
-  height: 300px;
-  background: #eee;
-  margin-bottom: 1rem;
-}
-
-footer {
-  background: #333;
-  color: white;
-  padding: 1rem;
-  text-align: center;
+  border: 1px solid orange;
 }

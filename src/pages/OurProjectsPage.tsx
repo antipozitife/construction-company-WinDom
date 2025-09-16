@@ -57,7 +57,7 @@ const OurProjectsPage = () => {
           </Link>
 
           {/* IQ CLUB */}
-          <Link to="/projects/IQClub">
+          <Link to="/projects/iqclub">
             <div className="ad-container">
               <img src={iq} alt="IQ Club" className="ad-image" />
               <div className="ad-info">
