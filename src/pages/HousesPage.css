@@ -16,7 +16,7 @@
 
 .projects-title {
   margin-top: 140px;
-  margin-left: 60px;
+  margin-left: 60px !important;
   font-size: 46px;
 }
 
@@ -57,7 +57,7 @@
   font-size: 30px;
   font-weight: 500;
   margin-top: 60px; /* Смещение вниз на 60px после фильтров */
-  margin-left: 60px;
+  margin-left: 60px !important;
 }
 
 .mainPr {
