@@ -134,3 +134,44 @@
   flex: 1;
   align-self: center;
 }
+
+@media (max-width: 768px) {
+  /* Заголовок по центру */
+  .projects-title {
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  /* Хлебные крошки */
+  .breadcrumb {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  /* Линия */
+  .line-divider {
+    margin: 10px auto 40px;
+  }
+
+  /* Карточки проектов */
+  .ad-info {
+    flex-direction: column; /* текст в колонку */
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  .ad-text-left h1 {
+    font-size: 26px;
+  }
+
+  .ad-text-left .location {
+    font-size: 16px;
+  }
+
+  /* Описание справа скрываем */
+  .ad-text-right {
+    display: none;
+  }
+}

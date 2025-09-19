@@ -79,3 +79,18 @@
 .dot.active-dot {
   background-color: #f4a261;
 }
+
+@media (max-width: 768px) {
+  .slide img {
+    width: 120%;
+    height: 60%;
+    object-fit: cover;
+  }
+
+  .slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: -60px;
+  }
+}

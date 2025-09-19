@@ -104,3 +104,85 @@
 .ymaps-2-1-79-searchbox-input {
     border-color: #f07c00 !important;
 }
+
+@media (max-width: 768px) {
+  .info-block {
+    display: none;
+  }
+
+  .section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;
+}
+
+.section-title img {
+  margin-left: 0; /* убираем старый отступ */
+  width: 40%;     /* подгони под нужный размер */
+  height: auto;
+}
+
+  .map-block {
+    height: 400px;
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 8px;
+    max-width: 90%;
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+
+  .modal-content h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .modal-content p,
+  .modal-content ul {
+    font-size: 16px;
+    color: #333;
+    list-style: none;
+  }
+
+.modal-content ul li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* расстояние между иконкой и текстом */
+}
+
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+  }
+
+  .route-button {
+    font-size: 14px;
+  }
+}

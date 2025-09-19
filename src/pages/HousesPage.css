@@ -214,3 +214,34 @@ object-position: center;
   color: white;
   border: 1px solid orange;
 }
+
+@media (max-width: 768px) {
+  .projects-title {
+    font-size: 30px;
+    text-align: left;
+    margin: 40px auto 20px auto; /* центрируем */
+    margin-left: 0 !important;  /* убираем фиксированные отступы */
+  }
+
+  .filters {
+    display: flex;
+    justify-content: center; /* кнопки по центру */
+    flex-wrap: wrap;         /* переносим, если не помещаются */
+    gap: 12px;
+    margin: 20px auto;
+    margin-left: 0;          /* убираем смещение */
+  }
+
+  .filters button {
+    font-size: 16px;
+    padding: 10px 16px;
+  }
+
+  .house-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 373px);
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}

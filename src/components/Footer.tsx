@@ -88,23 +88,26 @@ const Footer = () => {
 
         {/* ЛОГО и КОНТАКТЫ */}
         <div className="footer-column footer-brand">
-          <div className="logo">
-            <img src={logo} />
-          </div>
 
-            <div className="social-iconsF">
-                <a href="https://youtube.com/@ivandomrostov?si=wO8j8MLDnxF1_glh">
-                  <img src={youtube} alt="YouTube" />
-                </a>
-                <a href="https://vk.com/ivan_dom_rostov">
-                  <img src={vk} alt="VK" />
-                </a>
-                <a href="https://www.instagram.com/ivan_dom_rostov?igsh=bzJwa2VhMWxoOHBy">
-                  <img src={linkedin} alt="Instagram" />
-                </a>
-                <a href="https://t.me/ivandomrosrov">
-                  <img src={tumblr} alt="Telegram" />
-                </a>
+          <div className='logo-groupF'>
+            <div className="logo">
+              <img src={logo} />
+            </div>
+
+              <div className="social-iconsF">
+                  <a href="https://youtube.com/@ivandomrostov?si=wO8j8MLDnxF1_glh">
+                    <img src={youtube} alt="YouTube" />
+                  </a>
+                  <a href="https://vk.com/ivan_dom_rostov">
+                    <img src={vk} alt="VK" />
+                  </a>
+                  <a href="https://www.instagram.com/ivan_dom_rostov?igsh=bzJwa2VhMWxoOHBy">
+                    <img src={linkedin} alt="Instagram" />
+                  </a>
+                  <a href="https://t.me/ivandomrosrov">
+                    <img src={tumblr} alt="Telegram" />
+                  </a>
+              </div>
             </div>
 
           {/* Email */}

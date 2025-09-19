@@ -103,8 +103,8 @@ const Hero = () => {
         </div>
       </a>
       <h1>
-        СТРОИТЕЛЬНАЯ КОМПАНИЯ{" "}
-        <span>
+        <p>СТРОИТЕЛЬНАЯ КОМПАНИЯ</p>
+        <span className="textWINDOM">
           <span className="win">WIN</span>
           <span className="dom">DOM</span>
         </span>
