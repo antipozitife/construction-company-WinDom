@@ -7,7 +7,7 @@ module.exports = {
     path: path.resolve(__dirname, "build"), // Измените "dist" на "build"
     filename: "bundle.js",
     clean: true,
-    publicPath: './',
+    publicPath: '/',
   },
   module: {
     rules: [
