@@ -1,0 +1,126 @@
+.company-section {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 100px auto;
+  gap: 74px
+}
+
+.company-text {
+  width: 530px;
+  flex-shrink: 0;
+}
+
+.company-text h2 {
+  font-size: 40px;
+  color: #efa35a;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.company-text p {
+  font-size: 22px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 32px;
+  margin-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+.company-text .windom {
+  color: #efa35a;
+  font-weight: 500;
+}
+
+.images-container {
+  position: relative;
+  flex-shrink: 0;
+  margin-left: 74px;
+}
+
+.company-image {
+  margin-top: 31px;
+  width: 551px;
+  height: 451px;
+  display: block;
+  object-fit: cover;
+}
+
+.company-section .orange-frame {
+  position: absolute;
+  left: 31px;
+  top: 0px;
+  z-index: -1;
+  width: 488px;
+  height: 503px;
+}
+
+@media (max-width: 768px) {
+  .company-container {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0 16px;
+  }
+
+  .company-section {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 50px auto;
+    gap: 20px;
+  }
+
+  .company-text {
+    display: contents;
+    width: 100%;
+  }
+
+  .company-text h2 {
+    order: 1;
+    font-size: 42px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .images-container {
+    order: 2;
+    margin-left: 0;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .company-image {
+    width: 100%;
+    height: auto;
+    margin-top: calc(31 / 551 * 100%);
+    display: block;
+    object-fit: cover;
+  }
+
+  .company-section .orange-frame {
+    position: absolute;
+    left: calc(31 / 551 * 100%);
+    top: 0;
+    z-index: -1;
+    width: calc(488 / 551 * 100%);
+    height: auto;
+  }
+
+  .company-text p {
+    order: 3;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  .company-text .social-icons {
+    order: 4;
+    text-align: left;
+    margin: 20px 0 0;
+  }
+}

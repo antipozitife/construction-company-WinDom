@@ -1,0 +1,177 @@
+.containerProj {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Центрирует контейнер по горизонтали */
+  
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Заголовок */
+.projects-title {
+  margin-top: 40px;
+  margin-left: 0;
+  font-size: 46px;
+  margin-bottom: 60px;
+  display: flex;
+  gap: 10px; 
+}
+
+.black {
+  color: #000;
+}
+
+.orange {
+  color: #EFA359;
+}
+
+/* Навигация */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+
+.mainPr {
+  color: #353535;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.mainPr:hover {
+  color: #EFA359;
+  text-decoration: underline;
+}
+
+.current {
+  color: #000;
+  font-weight: bold;
+}
+
+/* Полоска */
+.line-divider {
+  display: block;
+  margin: 20px auto 60px; /* Центрирование и отступ */
+  max-width: 100%;
+}
+
+/* Секция проектов */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+/* Карточка проекта */
+.ad-container {
+  position: relative;
+  width: 100%;
+
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ad-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.ad-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Информация под изображением */
+.ad-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 74px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 24px 40px;
+  box-sizing: border-box;
+}
+
+/* Левая колонка */
+.ad-text-left h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 500;
+}
+
+.ad-text-left .location {
+  font-size: 20px;
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.status {
+  color: #EFA359;
+  font-weight: 500;
+}
+
+/* Правая колонка */
+.ad-text-right {
+  font-size: 18px;
+  color: #222;
+  flex: 1;
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+  /* Заголовок по центру */
+  .projects-title {
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  /* Хлебные крошки */
+  .breadcrumb {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  /* Линия */
+  .line-divider {
+    margin: 10px auto 40px;
+  }
+
+  /* Карточки проектов */
+  .ad-info {
+    flex-direction: column; /* текст в колонку */
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  .ad-text-left h1 {
+    font-size: 26px;
+  }
+
+  .ad-text-left .location {
+    font-size: 16px;
+  }
+
+  /* Описание справа скрываем */
+  .ad-text-right {
+    display: none;
+  }
+}

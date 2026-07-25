@@ -1,0 +1,26 @@
+.not-found {
+  min-height: 65vh;
+  padding: 96px 20px;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  gap: 20px;
+}
+
+.not-found__code {
+  color: #efa35a;
+  font-size: clamp(72px, 15vw, 180px);
+  font-weight: 800;
+  line-height: 0.8;
+}
+
+.not-found h1 {
+  font-size: clamp(30px, 5vw, 56px);
+}
+
+.not-found__link {
+  justify-self: center;
+  padding: 14px 24px;
+  color: #fff;
+  background: #efa35a;
+}
