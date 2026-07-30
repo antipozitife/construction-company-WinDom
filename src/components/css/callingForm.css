@@ -13,8 +13,8 @@
 }
 
 .window {
-  width: 438px;
-  height: 500px;
+  width: 420px;
+  height: auto;
   background-color: white;
   padding: 20px;
   box-sizing: border-box;
@@ -23,11 +23,10 @@
 }
 
 .window-content {
-  padding: 10px 38px;
-  height: 100%;
+  padding: 10px 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .window h2 {
@@ -58,7 +57,7 @@
 
 @media (max-width: 520px) {
   .window {
-    width: min(94vw, 438px);
+    width: min(94vw, 420px);
     height: auto;
     max-height: 92vh;
     overflow-y: auto;
