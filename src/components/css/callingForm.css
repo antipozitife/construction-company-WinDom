@@ -24,15 +24,16 @@
 
 .window-content {
   padding: 10px 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
 }
 
 .window h2 {
-  margin: 0 0 20px;
+  margin: 0 0 15px;
   text-align: center;
   font-size: 24px;
+}
+
+.window form {
+  margin: 0;
 }
 
 .window p {
