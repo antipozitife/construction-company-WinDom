@@ -53,8 +53,8 @@
 
 .architecture-description {
   position: absolute;
-  top: 600px;
-  right: -40px;
+  right: 16px;
+  bottom: 68px;
   padding: 20px;
   max-width: 810px;
   text-align: left;
