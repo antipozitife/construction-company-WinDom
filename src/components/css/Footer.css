@@ -150,6 +150,11 @@
     margin-bottom: 0;
 }
 
+.email a,
+.email a:visited {
+  color: white;
+}
+
 .privacy-policy {
   margin-top: 30px;
   font-size: 13px;

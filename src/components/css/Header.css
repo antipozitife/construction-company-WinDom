@@ -77,6 +77,18 @@ header a {
   gap: 92px;
 }
 
+.calling .phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1;
+}
+
+.calling .phone img {
+  display: block;
+  flex-shrink: 0;
+}
+
 header button {
   background-color: transparent;
   border: 1px solid #efa35a;
