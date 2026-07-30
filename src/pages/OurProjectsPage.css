@@ -157,6 +157,7 @@
 
   /* Карточки проектов */
   .ad-info {
+    position: static;
     flex-direction: column; /* текст в колонку */
     gap: 16px;
     padding: 16px 20px;
