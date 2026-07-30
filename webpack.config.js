@@ -66,6 +66,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html", // Использовать как базовый HTML
       filename: "index.html",
+      favicon: "./img/logo.svg",
     }),
     new webpack.DefinePlugin({
       __YANDEX_MAPS_API_KEY__: JSON.stringify(
