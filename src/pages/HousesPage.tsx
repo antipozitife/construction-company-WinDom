@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
@@ -69,6 +69,7 @@ const houses: House[] = [
 const popularHouses = houses.slice(0, 4);
 
 const HousesPage = () => {
+  const houseGridRef = useRef<HTMLDivElement>(null);
   const [searchParams, setSearchParams] = useSearchParams();
   const [selectedFloors, setSelectedFloors] = useState<number | null>(null);
   const [selectedType, setSelectedType] = useState<string | null>('all');
@@ -119,7 +120,7 @@ const HousesPage = () => {
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    houseGridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -221,7 +222,7 @@ const HousesPage = () => {
             <img src={line} alt="line" className="line-divider" />
           </div>
         </div>
-        <div className="house-grid">
+        <div className="house-grid" ref={houseGridRef}>
           {currentHouses.map((house) => (
             <div key={house.id} className="house-card">
               <img src={house.image} alt={house.name} className="house-image" loading="lazy" />
